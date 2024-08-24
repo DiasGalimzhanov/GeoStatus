@@ -1,5 +1,73 @@
 .img_slider {
-    width: 800px;
-    height: 300px;
+    width: 100%;
+    height: 600px;
     object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* About Section */
+.about-section .container1{
+    width: 100%;
+    padding: 50px;
+    text-align: center;
+    align-items: center;
+    background-color: white;
+}
+
+.container1 .logo-about{
+    width: 400px;
+}
+
+.geostatus-color{
+    color: #0a88c3;
+}
+
+.about-section .container2{
+    width: 100%;
+    padding: 50px;
+    text-align: center;
+    background-image: url(../images/background/back_container2.jpg);
+    color: white;
+    /* background-color: rgb(222, 218, 218); */
+
+    /* display: flex; */
+    /* justify-content: space-around; */
+}
+
+.container2 .staffs{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container2 .staffs-container{
+    padding-top: 80px;
+}
+
+.container2 .staff{
+    width: 30%;
+
+}
+
+.staff img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.container3 img{
+    width: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 5%;
+}
+
+.container3{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
