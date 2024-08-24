@@ -70,4 +70,136 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 400px;
+    height: 600px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .img_slider {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+/* Servisces section */
+.services-header{
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+#services-section {
+    background-image: url('../images/services-bg.jpg');
+    /* background-color: #066183; */
+    width: 100%;
+    height: 180vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 40px;
+}
+
+.services-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px auto;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+.services-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.text-content {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.text-content h2 {
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.text-content h3 {
+    font-size: 24px;
+    color: #cdcdcd;
+    margin-bottom: 15px;
+}
+
+.text-content p {
+    font-size: 16px;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+.text-content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.text-content ul li {
+    font-size: 16px;
+    color: #d3d3d3;
+    margin-bottom: 10px;
+}
+
+.text-content ul li strong {
+    color: #c1c1c1;
+}
+
+.image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+}
+
+.image-content img {
+    max-width: 60%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.services-cards {
+    height: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card-services {
+    background-color: #b0d6ee;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    flex: 1 1 calc(33% - 20px);
+    max-width: calc(33% - 20px);
+}
+
+.card-services img {
+    max-width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card-services h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-services p {
+    font-size: 14px;
+    color: #666;
 }

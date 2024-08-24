@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 # Created by https://www.toptal.com/developers/gitignore/api/django,venv,python
 # Edit at https://www.toptal.com/developers/gitignore?templates=django,venv,python
+=======
+# Created by https://www.toptal.com/developers/gitignore/api/django
+# Edit at https://www.toptal.com/developers/gitignore?templates=django
+>>>>>>> b54cbf67a36cc6aaf57fd80f7a205a8c20fff436
 
 ### Django ###
 *.log
@@ -171,6 +176,7 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
+<<<<<<< HEAD
 ### Python ###
 # Byte-compiled / optimized / DLL files
 
@@ -276,3 +282,6 @@ pyvenv.cfg
 pip-selfcheck.json
 
 # End of https://www.toptal.com/developers/gitignore/api/django,venv,python
+=======
+# End of https://www.toptal.com/developers/gitignore/api/django
+>>>>>>> b54cbf67a36cc6aaf57fd80f7a205a8c20fff436
