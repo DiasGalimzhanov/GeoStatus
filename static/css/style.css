@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 10px 80px !important;
+}
+
+.navbar-container .logo img {
+    height: 60px;
+}
+
+.navbar-container .menu {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-container .menu a {
+    color: #067a84;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+}
+
+.navbar-container .menu a:hover {
+    background-color: #d9e8eb;
+    border-radius: 5px;
+}
+
+.navbar-container .contacts {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navbar-container .contacts a {
+    color: #067a84;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar-container .contacts a:hover {
+    color: #067a84;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #067a84;
+    transition: all 0.3s;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu a {
+    color: #067a84;
+    text-decoration: none;
+    padding: 8px 12px;
+}
+
+.mobile-menu a:hover {
+    background-color: #d9e8eb;
+    border-radius: 5px;
+}
+
+.mobile-menu.active {
+    display: flex;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .navbar-container {
+        padding: 10px 20px;
+    }
+
+    .navbar-container .menu, .navbar .contacts {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        position: absolute;
+        top: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .navbar-container .logo {
+        flex: 1;
+    }
+
+    .navbar-container .contacts {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-container .logo img {
+        height: 50px;
+    }
+
+    .mobile-menu {
+        top: 60px;
+        right: 10px;
+    }
+}

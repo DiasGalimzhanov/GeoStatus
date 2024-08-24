@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/css/bootstrap.min.css' %}">
+    <title>Base</title>
+</head>
+<body>
+    <nav class="navbar-container">
+        <a href="{% url 'home' %}" class="logo">
+            <img src="{% static 'images/logo.png' %}" alt="Компания">
+        </a>
+        <div class="menu">
+            <a href="{% url 'home' %}">Главное</a>
+            <a href="#">Услуги</a>
+            <a href="#">О компании</a>
+            <a href="#">Портфолио</a>
+            <a href="#">Контакты</a>
+        </div>
+        <div class="contacts">
+            <a href="mailto:example@example.com">example@example.com</a>
+            <a href="tel:+1234567890">+1 (234) 567-890</a>
+        </div>
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <a href="{% url 'home' %}">Главное</a>
+        <a href="#">Услуги</a>
+        <a href="#">О компании</a>
+        <a href="#">Портфолио</a>
+        <a href="#">Контакты</a>
+    </div>
+
+    {% block content %}
+    {% endblock %}
+
+<script>
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    hamburgerMenu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+        hamburgerMenu.classList.toggle('active');
+    });
+</script>
+<script src="{% static 'js/js/bootstrap.bundle.min.js' %}"></script>
+    
+</body>
+</html>
