@@ -5,17 +5,17 @@ body {
     box-sizing: border-box;
 }
 
-.navbar-container {
+/* .navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: rgb(255, 255, 255);
     padding: 10px 80px !important;
-}
+} */
 
-.navbar-container .logo img {
+/* .navbar-container .logo img {
     height: 60px;
-}
+} */
 
 .navbar-container .menu {
     display: flex;
@@ -50,6 +50,83 @@ body {
     color: #067a84;
 }
 
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1000; /* Убедитесь, что навбар поверх всех элементов */
+}
+
+.navbar-container .logo img {
+    height: 60px;
+}
+
+.center-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.center-contacts a {
+    color: #067a84;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #067a84;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    padding: 10px;
+    z-index: 1100; /* Поверх всех элементов, включая карусель */
+}
+
+.mobile-menu a {
+    color: #067a84;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+}
+
+.mobile-menu a:hover {
+    background-color: #d9e8eb;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .center-contacts, .menu {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+}
+
+
+
+/* 
 .hamburger-menu {
     display: none;
     flex-direction: column;
@@ -92,6 +169,7 @@ body {
 }
 
 /* Адаптивные стили */
+/*
 @media (max-width: 768px) {
     .navbar-container {
         padding: 10px 20px;
@@ -139,4 +217,4 @@ body {
         top: 60px;
         right: 10px;
     }
-}
+} */
