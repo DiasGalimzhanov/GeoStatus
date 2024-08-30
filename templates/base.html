@@ -35,13 +35,13 @@
         </div>
     </nav>
 
-    <div class="mobile-menu">
+    <!-- <div class="mobile-menu">
         <a href="{% url 'home' %}">Главное</a>
         <a href="#about">О компании</a>
         <a href="#services-section">Услуги</a>
         <a href="#">Портфолио</a>
         <a href="#contacts-section">Контакты</a>
-    </div>
+    </div> -->
 
     {% block content %}
     {% endblock %}
@@ -89,7 +89,7 @@
         <p> Компания <span class="geostatus-color">ГЕО СТАТУС KZ</span> | Все права защищены © 2024.</p>
     </section>
 
-    <script>
+    <!-- <script>
         const hamburgerMenu = document.querySelector('.hamburger-menu');
         const mobileMenu = document.querySelector('.mobile-menu');
 
@@ -97,7 +97,7 @@
             mobileMenu.classList.toggle('active');
             hamburgerMenu.classList.toggle('active');
         });
-    </script>
+    </script> -->
     <script src="{% static 'js/js/bootstrap.bundle.min.js' %}"></script>
 
 </body>
