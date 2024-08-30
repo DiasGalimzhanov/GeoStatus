@@ -2,6 +2,31 @@
 {% load static %}
 
 {% block content %}
+<button id="scrollToTopBtn" onclick="scrollToTop()">▲ Наверх</button>
+
+<!-- Кнопка "Связаться по WhatsApp" -->
+<a id="whatsappBtn" href="https://wa.me/+77761392144" target="_blank">
+  <img src="{% static 'images/whatsapp-icon.png' %}" alt="WhatsApp">
+</a>
+
+<script>
+  // Показываем кнопку при прокрутке страницы вниз
+window.onscroll = function() {
+    let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollToTopBtn.style.display = "block";
+    } else {
+        scrollToTopBtn.style.display = "none";
+    }
+};
+
+// Функция прокрутки наверх
+function scrollToTop() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+</script>
+
 <section id="carouselExampleCaptions" class="carousel slide">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -41,6 +66,7 @@
     <span class="visually-hidden">Next</span>
   </button>
 </section>
+
 <section class="about-section" id="about">
   <div class="container1">
     <h2>О нас</h2>
@@ -117,6 +143,7 @@
     </div>
   </div>
 </section>
+
 <section id="services-section">
     <div class="services-header">
       <h3>Услуги</h3>
@@ -165,10 +192,12 @@
           <p>Детальная интерпретация и представление результатов изысканий.</p>
       </div>
       <div class="card-services">
-          <img src="{% static 'images/card-2.jpeg' %}" alt="Выдача отчета">
+          <img src="{% static 'images/card-3.jpg' %}" alt="Выдача отчета">
           <h4>Выдача отчета</h4>
           <p>Подготовка четких и применимых отчетов для успешного ведения проекта.</p>
       </div>
   </div>
   </section>
+
+
 {% endblock %}

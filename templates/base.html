@@ -1,14 +1,17 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
     <link rel="stylesheet" href="{% static 'css/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Base</title>
 </head>
+
 <body>
     <nav class="navbar-container">
         <a href="{% url 'home' %}" class="logo">
@@ -16,10 +19,10 @@
         </a>
         <div class="menu">
             <a href="{% url 'home' %}">Главное</a>
-            <a href="#">О компании</a>
+            <a href="#about">О компании</a>
             <a href="#services-section">Услуги</a>
             <a href="#">Портфолио</a>
-            <a href="#">Контакты</a>
+            <a href="#contacts-section">Контакты</a>
         </div>
         <div class="contacts">
             <a href="mailto:example@example.com">example@example.com</a>
@@ -34,25 +37,69 @@
 
     <div class="mobile-menu">
         <a href="{% url 'home' %}">Главное</a>
-        <a href="#">О компании</a>
-        <a href="#">Услуги</a>
+        <a href="#about">О компании</a>
+        <a href="#services-section">Услуги</a>
         <a href="#">Портфолио</a>
-        <a href="#">Контакты</a>
+        <a href="#contacts-section">Контакты</a>
     </div>
 
     {% block content %}
     {% endblock %}
 
-<script>
-    const hamburgerMenu = document.querySelector('.hamburger-menu');
-    const mobileMenu = document.querySelector('.mobile-menu');
-
-    hamburgerMenu.addEventListener('click', () => {
-        mobileMenu.classList.toggle('active');
-        hamburgerMenu.classList.toggle('active');
-    });
-</script>
-<script src="{% static 'js/js/bootstrap.bundle.min.js' %}"></script>
+    <footer id="contacts-section" class="footer">
+        <section class="logo-section">
+            <a href="{% url 'home' %}" class="logo">
+                <img src="{% static 'images/logo.png' %}" alt="Компания">
+            </a>
+            <p><b>Компания, специализирующаяся на геодезических исследованиях и инженерных изысканиях, 
+            обеспечивая высокоточные данные для строительства и проектирования.</b></p>
+        </section>
     
+        <section class="contacts-section">
+            <div class="contacts">
+                <h3>Контакты</h3>
+                <a href="mailto:example@example.com"><i class="fas fa-envelope"></i> example@example.com</a>
+                <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1 (234) 567-890</a>
+                <a href="">г. Астана, ул. example, 123</a>
+            </div>
+            <div class="menu">
+                <h3>ГЕО <span style="color: black;">СТАТУС KZ</span></h3>
+                <ul>
+                    <li><a href="{% url 'home' %}">Главное</a></li>
+                    <li><a href="#about">О компании</a></li>
+                    <li><a href="#services-section">Услуги</a></li>
+                    <li><a href="#">Портфолио</a></li>
+                    <li><a href="#contacts-section">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="social">
+                <h3>Наши социальные сети</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/geostatus.kz/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://www.facebook.com/geostatus.kz/" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                    <li><a href="https://wa.me/+77761392144" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                </ul>
+            </div>
+        </section>
+    </footer>
+    
+
+
+    <section class="rights">
+        <p> Компания <span class="geostatus-color">ГЕО СТАТУС KZ</span> | Все права защищены © 2024.</p>
+    </section>
+
+    <script>
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        hamburgerMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            hamburgerMenu.classList.toggle('active');
+        });
+    </script>
+    <script src="{% static 'js/js/bootstrap.bundle.min.js' %}"></script>
+
 </body>
+
 </html>
