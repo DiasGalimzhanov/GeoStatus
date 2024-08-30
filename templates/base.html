@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'images/logo/favicon.ico' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
     <link rel="stylesheet" href="{% static 'css/css/bootstrap.min.css' %}">
@@ -15,7 +16,7 @@
 <body>
     <nav class="navbar-container">
         <a href="{% url 'home' %}" class="logo">
-            <img src="{% static 'images/logo.png' %}" alt="Компания">
+            <img src="{% static 'images/logo/logo.png' %}" alt="Компания">
         </a>
         <div class="center-contacts">
             <a href="mailto:example@example.com">example@example.com</a>
@@ -49,7 +50,7 @@
     <footer id="contacts-section" class="footer">
         <section class="logo-section">
             <a href="{% url 'home' %}" class="logo">
-                <img src="{% static 'images/logo.png' %}" alt="Компания">
+                <img src="{% static 'images/logo/logo.png' %}" alt="Компания">
             </a>
             <p><b>Компания, специализирующаяся на геодезических исследованиях и инженерных изысканиях, 
             обеспечивая высокоточные данные для строительства и проектирования.</b></p>
@@ -88,16 +89,6 @@
     <section class="rights">
         <p> Компания <span class="geostatus-color">ГЕО СТАТУС KZ</span> | Все права защищены © 2024.</p>
     </section>
-
-    <!-- <script>
-        const hamburgerMenu = document.querySelector('.hamburger-menu');
-        const mobileMenu = document.querySelector('.mobile-menu');
-
-        hamburgerMenu.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-            hamburgerMenu.classList.toggle('active');
-        });
-    </script> -->
     <script src="{% static 'js/js/bootstrap.bundle.min.js' %}"></script>
 
 
