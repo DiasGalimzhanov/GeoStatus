@@ -5,18 +5,32 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+@media (max-width: 768px) {
+    .img_slider {
+        height: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+    .img_slider {
+        height: 300px;
+    }
+}
+
 
 /* About Section */
 .about-section .container1 {
     width: 100%;
     padding: 50px;
-    text-align: center;
+    text-align: center; 
     align-items: center;
     background-color: white;
 }
 
 .container1 .logo-about {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
 }
 
 .geostatus-color {
@@ -29,15 +43,14 @@
     text-align: center;
     background-image: url(../images/background/back_container2.jpg);
     color: white;
-    /* background-color: rgb(222, 218, 218); */
-
-    /* display: flex; */
-    /* justify-content: space-around; */
+    background-size: cover;
+    background-position: center;
 }
 
 .container2 .staffs {
     margin-top: 20px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
@@ -47,8 +60,10 @@
 }
 
 .container2 .staff {
-    width: 30%;
-
+    width: 100%;
+    max-width: 300px;
+    margin: 10px;
+    text-align: center;
 }
 
 .staff img {
@@ -59,26 +74,181 @@
     margin-bottom: 20px;
 }
 
+.container3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+    background-color: #0a88c3;
+}
+
 .container3 img {
-    width: 50%;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
     object-fit: cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border-radius: 5%;
 }
 
-.container3 {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 400px;
-    height: 600px;
-    object-fit: cover;
+.container3 div {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    text-align: center;
 }
 
+
+/* Адаптивность  для мобильных телефонов до 768px */
+/* About Section Adaptive */
 @media (max-width: 768px) {
-    .img_slider {
+    .about-section .container1 {
+        padding: 30px;
+        font-size: 15px;
+    }
+    .container1 h2, h4, p{
+        font-size: 15px;
+    }
+
+    .container1 .logo-about {
         width: 100%;
-        height: 100%;
+        max-width: 300px;
+    }
+
+    .container2 h4, p{
+        font-size: 15px;
+    }
+
+    .container2 .staff {
+        width: 100%;
+        max-width: 250px;
+        font-size: 15px;
+    }
+
+    .staff img {
+        max-width: 120px;
+    }
+
+    .container3 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container3 img {
+        max-width: 250px;
+    }
+
+    .container3 div {
+        max-width: 100%;
+        font-size: 15px;
+    }
+}
+
+/* Адаптивность  для мобильных телефонов до 576px */
+/* About Section Adaptive */
+@media (max-width: 576px) {
+    .about-section .container1 {
+        padding: 20px;
+        font-size: 11px;
+    }
+
+    .container1 h2, h4, p{
+        font-size: 11px;
+    }
+
+    .container1 .logo-about {
+        max-width: 200px;
+    }
+
+    .container2 h4, p{
+        font-size: 12px;
+    }
+
+    .container2 .staff {
+        width: 100%;
+        max-width: 200px;
+        font-size: 12px;
+    }
+
+    .staff img {
+        max-width: 100px;
+    }
+
+    .container3 {
+        padding: 20px;
+    }
+
+    .container3 img {
+        max-width: 200px;
+    }
+
+    .container3 div {
+        max-width: 100%;
+        font-size: 12px;
+    }
+}
+
+
+/* Адаптивность  для мобильных телефонов до 370px */
+/* About Section Adaptive */
+@media (max-width: 370px) {
+    .about-section .container1 {
+        padding: 20px;
+        font-size: 9px;
+    }
+    
+    .container1 h2, h4, p{
+        font-size: 9px;
+    }
+
+    .container1 .logo-about {
+        width: 200px;
+    }
+
+    .about-section .container2 {
+        padding: 20px;
+        background-size: cover;
+    }
+
+    .container2 h4, p{
+        font-size: 10px;
+    }
+
+    .container2 .staffs {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .container2 .staff {
+        width: 80%;
+        margin-bottom: 30px;
+        font-size: 10px;
+    }
+
+    .staff img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .container3 {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .container3 img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .carousel-inner .carousel-item {
+        height: 200px;
+    }
+    
+    .img_slider {
+        height: 200px;
     }
 }
 
@@ -92,7 +262,6 @@
 
 #services-section {
     background-image: url('../images/services-bg.jpg');
-    /* background-color: #066183; */
     width: 100%;
     height: 180vh;
     background-size: cover;
@@ -247,6 +416,154 @@
     object-fit: cover; 
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Адаптивность  для планшетов до 768px */
+/* Servisces section Adaptive */
+@media (max-width: 768px) {
+    #services-section {
+        padding: 40px 20px;
+        height: auto;
+        font-size: 15px;
+    }
+
+    .services-content {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .text-content {
+        margin-right: 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .image-content img {
+        max-width: 80%;
+    }
+
+    .card-services {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+/* Адаптивность  для мобильных телефонов до 576px */
+/* Servisces section Adaptive */
+@media (max-width: 576px) {
+    #services-section {
+        padding: 30px 15px;
+        height: auto;
+    }
+
+    .services-header h3 {
+        font-size: 24px;
+    }
+
+    .text-content h2 {
+        font-size: 28px;
+    }
+
+    .text-content h3 {
+        font-size: 20px;
+    }
+
+    .text-content p, .text-content ul li {
+        font-size: 14px;
+    }
+
+    .image-content img {
+        max-width: 100%;
+    }
+
+    .services-cards {
+        gap: 15px;
+    }
+
+    .card-services {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+/* Адаптивность  для мобильных телефонов до 370px */
+/* Servisces section Adaptive */
+@media (max-width: 370px) {
+    #services-section {
+        padding: 20px 15px;
+        height: auto;
+        font-size: 15px;
+    }
+
+    .services-header h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .services-content {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .text-content {
+        margin-right: 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .text-content h2 {
+        font-size: 24px;
+    }
+
+    .text-content h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .text-content p,
+    .text-content ul li {
+        font-size: 14px;
+    }
+
+    .image-content {
+        justify-content: center;
+    }
+
+    .image-content img {
+        max-width: 80%;
+    }
+
+    .services-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-services {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .card-services img {
+        height: 200px;
+    }
+
+    #scrollToTopBtn {
+        width: 40px;
+        height: 40px;
+        padding: 5px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    #whatsappBtn {
+        width: 50px;
+        height: 50px;
+        bottom: 60px;
+        right: 15px;
+    }
 }
 
 
@@ -436,3 +753,4 @@
 .company_trusts_section_content_item img{
     width: 190px;
 }
+
