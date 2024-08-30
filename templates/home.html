@@ -3,29 +3,31 @@
 
 {% block content %}
 <button id="scrollToTopBtn" onclick="scrollToTop()">▲</button>
+<button id="scrollToTopBtn" onclick="scrollToTop()">▲</button>
 
 <!-- Кнопка "Связаться по WhatsApp" -->
 <a id="whatsappBtn" href="https://wa.me/+77761392144" target="_blank">
-  <img src="{% static 'images/whatsapp-icon.png' %}" alt="WhatsApp">
+  <img src="{% static 'images/logo/logoWhatApp.png' %}" alt="WhatsApp">
 </a>
 
 <script>
   // Показываем кнопку при прокрутке страницы вниз
-window.onscroll = function() {
+  window.onscroll = function () {
     let scrollToTopBtn = document.getElementById("scrollToTopBtn");
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        scrollToTopBtn.style.display = "block";
+      scrollToTopBtn.style.display = "block";
     } else {
-        scrollToTopBtn.style.display = "none";
+      scrollToTopBtn.style.display = "none";
     }
-};
+  };
 
-// Функция прокрутки наверх
-function scrollToTop() {
-    window.scrollTo({top: 0, behavior: 'smooth'});
-}
+  // Функция прокрутки наверх
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
 </script>
+
 
 <section id="carouselExampleCaptions" class="carousel slide">
   <div class="carousel-indicators">
@@ -67,7 +69,9 @@ function scrollToTop() {
   </button>
 </section>
 
-<section class="about-section" id="about">
+
+<!-- About -->
+<section class="about-section" id="about-section">
   <div class="container1">
     <h2>О нас</h2>
     <img class="logo-about" src="{% static 'images/logo.png' %}" alt="">
@@ -144,6 +148,8 @@ function scrollToTop() {
   </div>
 </section>
 
+
+<!-- Services -->
 <section id="services-section">
     <div class="services-header">
       <h3>Услуги</h3>
@@ -176,10 +182,10 @@ function scrollToTop() {
           <hr style="color: aliceblue;">
 
 
-      </div>
-      <div class="image-content">
-          <img src="{% static 'images/img-services-sec.jpg' %}" alt="Инженерно-геологические изыскания">
-      </div>
+    </div>
+    <div class="image-content">
+      <img src="{% static 'images/img-services-sec.jpg' %}" alt="Инженерно-геологические изыскания">
+    </div>
   </div>
 
   <div class="services-cards">
@@ -190,23 +196,145 @@ function scrollToTop() {
         <p class="card-text">Точное и качественное бурение для оценки подземных условий.</p>
       </div>
     </div> -->
-      <div class="card-services">
-        <img src="{% static 'images/card-1.jpg' %}" alt="Камеральная обработка">
-        <h4>Бурение скважин</h4>
-        <p>Точное и качественное бурение для оценки подземных условий.</p>
-      </div>
-      <div class="card-services">
-          <img src="{% static 'images/card-2.jpeg' %}" alt="Камеральная обработка">
-          <h4>Камеральная обработка данных</h4>
-          <p>Детальная интерпретация и представление результатов изысканий.</p>
-      </div>
-      <div class="card-services">
-          <img src="{% static 'images/card-3.jpg' %}" alt="Выдача отчета">
-          <h4>Выдача отчета</h4>
-          <p>Подготовка четких и применимых отчетов для успешного ведения проекта.</p>
-      </div>
+    <div class="card-services">
+      <img src="{% static 'images/card-1.jpg' %}" alt="Камеральная обработка">
+      <h4>Бурение скважин</h4>
+      <p>Точное и качественное бурение для оценки подземных условий.</p>
+    </div>
+    <div class="card-services">
+      <img src="{% static 'images/card-2.jpeg' %}" alt="Камеральная обработка">
+      <h4>Камеральная обработка данных</h4>
+      <p>Детальная интерпретация и представление результатов изысканий.</p>
+    </div>
+    <div class="card-services">
+      <img src="{% static 'images/card-3.jpg' %}" alt="Выдача отчета">
+      <h4>Выдача отчета</h4>
+      <p>Подготовка четких и применимых отчетов для успешного ведения проекта.</p>
+    </div>
   </div>
+</section>
+
+<!-- Portfolio -->
+<section id="portfolio-section" class="portfolio-section">
+
+  <section class="our-projects">
+
+    <div class="portfolio-header">
+      <h2><Span class="geostatus-color">Наши достижения и опыт</Span></h2>
+      <p>Мы предлагаем широкий спектр услуг по геодезии и геологии. Наши проекты поддерживаются на всех этапах.
+        Портфолио выполненных геодезических проектов вы можете посмотреть ниже.</p>
+    </div>
+
+
+    <button class="scroll-btn scroll-left" type="button">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+
+    <div id="portfolio-container" class="portfolio-content">
+
+      <div class="portfolio-card">
+        <img src="{% static 'images/portfolio_works/work1.jpg' %}">
+        <h4>Загородный коттедж</h4>
+        <p>Уютный дом с просторным участком, современными удобствами и живописными видами.</p>
+      </div>
+
+      <div class="portfolio-card">
+        <img src="{% static 'images/portfolio_works/work2.jpg' %}">
+        <h4>Бизнес-центр класса А</h4>
+        <p>Удобное расположение, высокотехнологичные офисные помещения, и продуманные общие зоны.</p>
+      </div>
+
+      <div class="portfolio-card">
+        <img src="{% static 'images/portfolio_works/work3.jpg' %}">
+        <h4>Школа</h4>
+        <p>Современное учебное заведение с просторными классами, оборудованными лабораториями и спортивными площадками
+          для всестороннего развития учеников.</p>
+      </div>
+
+      <div class="portfolio-card">
+        <img src="{% static 'images/portfolio_works/work4.jpg' %}">
+        <h4>Больница</h4>
+        <p>Медицинское учреждение с передовым оборудованием, комфортабельными палатами и высококвалифицированными
+          специалистами для качественного лечения и ухода.</p>
+      </div>
+
+      <div class="portfolio-card">
+        <img src="{% static 'images/portfolio_works/work5.jpg' %}">
+        <h4>Детский сад</h4>
+        <p>Уютное и безопасное пространство для дошкольников, с яркими игровыми зонами, образовательными программами и
+          заботливым персоналом.</p>
+      </div>
+
+      <div class="portfolio-card">
+        <img src="{% static 'images/portfolio_works/work6.jpg' %}">
+        <h4>Магазин</h4>
+        <p>Удобный и современный торговый объект с широким ассортиментом товаров, уютной атмосферой и высоким уровнем
+          обслуживания клиентов.</p>
+      </div>
+
+    </div>
+
+    <button class="scroll-btn scroll-right" type="button">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+
   </section>
 
+  <section class="company_trusts_section">
+
+    <div class="company_trusts_section_header">
+      <h2>Компании, которые доверяют нам</h2>
+      <p></p>
+    </div>
+
+    <div class="company_trusts_section_content">
+
+      <div class="company_trusts_section_content_item">
+        <img src="{% static 'images/companies/company1.png' %}">
+      </div>
+
+      <div class="company_trusts_section_content_item">
+        <img src="{% static 'images/companies/company1.png' %}">
+      </div>
+
+      <div class="company_trusts_section_content_item">
+        <img src="{% static 'images/companies/company1.png' %}">
+      </div>
+
+      <div class="company_trusts_section_content_item">
+        <img src="{% static 'images/companies/company1.png' %}">
+      </div>
+
+      <div class="company_trusts_section_content_item">
+        <img src="{% static 'images/companies/company1.png' %}">
+      </div>
+
+      <div class="company_trusts_section_content_item">
+        <img src="{% static 'images/companies/company1.png' %}">
+      </div>
+
+      <div class="company_trusts_section_content_item">
+        <img src="{% static 'images/companies/company1.png' %}">
+      </div>
+
+    </div>
+
+  </section>
+
+</section>
+
+<!-- Scroll Script -->
+<script>
+  document.querySelector('.scroll-left').addEventListener('click', function () {
+    document.getElementById('portfolio-container').scrollBy({ left: -300, behavior: 'smooth' });
+  });
+
+  document.querySelector('.scroll-right').addEventListener('click', function () {
+    document.getElementById('portfolio-container').scrollBy({ left: 300, behavior: 'smooth' });
+  });
+</script>
 
 {% endblock %}
