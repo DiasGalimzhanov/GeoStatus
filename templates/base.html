@@ -18,6 +18,13 @@
         <a href="{% url 'home' %}" class="logo">
             <img src="{% static 'images/logo/logo.png' %}" alt="Компания">
         </a>
+        <div class="menu">
+            <a href="{% url 'home' %}">Главное</a>
+            <a href="#about-section">О компании</a>
+            <a href="#services-section">Услуги</a>
+            <a href="#portfolio-section">Портфолио</a>
+            <a href="#contacts-section">Контакты</a>
+        </div>
         <div class="center-contacts">
             <a href="mailto:example@example.com">example@example.com</a>
             <a href="tel:+1234567890">+1 (234) 567-890</a>
@@ -38,8 +45,9 @@
 
     <script>
         document.querySelector('.hamburger-menu').addEventListener('click', function() {
-        const mobileMenu = document.querySelector('.mobile-menu');
-        mobileMenu.style.display = mobileMenu.style.display === 'flex' ? 'none' : 'flex';});
+            const mobileMenu = document.querySelector('.mobile-menu');
+            mobileMenu.style.display = mobileMenu.style.display === 'flex' ? 'none' : 'flex';
+            });
     </script>
 
 

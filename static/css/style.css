@@ -1,55 +1,4 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(255, 255, 255);
-    padding: 10px 80px !important;
-} */
-
-/* .navbar-container .logo img {
-    height: 60px;
-} */
-
-.navbar-container .menu {
-    display: flex;
-    gap: 20px;
-}
-
-.navbar-container .menu a {
-    color: #067a84;
-    text-decoration: none;
-    padding: 8px 12px;
-    transition: background-color 0.3s;
-}
-
-.navbar-container .menu a:hover {
-    background-color: #d9e8eb;
-    border-radius: 5px;
-}
-
-.navbar-container .contacts {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-.navbar-container .contacts a {
-    color: #067a84;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.navbar-container .contacts a:hover {
-    color: #067a84;
-}
-
+/* Основные стили */
 .navbar-container {
     display: flex;
     justify-content: space-between;
@@ -57,11 +6,31 @@ body {
     background-color: rgb(255, 255, 255);
     padding: 10px 20px;
     position: relative;
-    z-index: 1000; /* Убедитесь, что навбар поверх всех элементов */
+    z-index: 1000; /* Навбар поверх всех элементов */
 }
 
 .navbar-container .logo img {
     height: 60px;
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    /* color: #040404; */
+    text-decoration: none;
+    padding: 8px 12px;
+    color: #0a88c3;
+    /* transition: background-color 0.3s; */
+}
+
+.menu a:hover {
+    background-color: #cedce3;
+    border-radius: 5px;
 }
 
 .center-contacts {
@@ -71,13 +40,13 @@ body {
 }
 
 .center-contacts a {
-    color: #067a84;
+    color: #0a88c3;
     text-decoration: none;
     margin: 5px 0;
 }
 
 .hamburger-menu {
-    display: none;
+    display: none; /* Скрываем гамбургерное меню в настольной версии */
     flex-direction: column;
     gap: 4px;
     cursor: pointer;
@@ -90,7 +59,7 @@ body {
 }
 
 .mobile-menu {
-    display: none;
+    display: none; /* Мобильное меню скрыто по умолчанию */
     flex-direction: column;
     gap: 10px;
     background-color: #fff;
@@ -114,16 +83,24 @@ body {
     border-radius: 5px;
 }
 
+/* Стили для мобильных устройств */
 @media (max-width: 768px) {
-    .center-contacts, .menu {
-        display: none;
+    .menu {
+        display: none; /* Скрываем меню в мобильной версии */
+    }
+
+    .center-contacts {
+        display: none; /* Скрываем контакты в мобильной версии */
     }
 
     .hamburger-menu {
-        display: flex;
+        display: flex; /* Показываем гамбургерное меню в мобильной версии */
+    }
+
+    .mobile-menu {
+        display: none; /* Мобильное меню будет скрыто до нажатия на гамбургер */
     }
 }
-
 
 
 /* 

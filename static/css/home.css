@@ -627,8 +627,7 @@
 }
 
 .contacts a,
-.social ul li a,
-.menu a {
+.social ul li a {
     color: white;
     font-size: 16px;
     text-decoration: none;
@@ -637,8 +636,7 @@
 }
 
 .contacts a:hover,
-.social ul li a:hover,
-.menu a:hover {
+.social ul li a:hover {
     color: #cdcdcd;
 }
 
