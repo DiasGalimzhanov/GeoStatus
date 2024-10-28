@@ -19,7 +19,7 @@
 git clone https://github.com/DiasGalimzhanov/GeoStatus  
 
 Ссылка на сайт
-
+https://geo-status.kz/
   
 Контакты  
 Если у вас есть предложения или вопросы, пожалуйста, свяжитесь с нами через наши социальные сети.  
